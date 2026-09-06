@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Angie ❤️</title>
+<style>
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; display:grid; place-items:center;
+    background:linear-gradient(135deg,#fff0f6,#ffe4ec,#fff7fb);
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:#54263a; overflow:hidden;
+  }
+  .card{
+    width:min(92vw,620px); padding:22px 22px 28px; text-align:center;
+    background:rgba(255,255,255,.78); border:2px solid rgba(255,255,255,.9);
+    border-radius:30px; box-shadow:0 20px 60px rgba(120,40,75,.16);
+    backdrop-filter:blur(10px);
+  }
+  h1{margin:4px 0 2px;font-size:clamp(28px,7vw,46px)}
+  .sub{margin:0 0 18px;font-size:15px;opacity:.75}
+  video{
+    width:100%; max-height:62vh; display:block; object-fit:contain;
+    border-radius:22px; background:#fff; box-shadow:0 10px 30px rgba(90,30,55,.12);
+  }
+  .message{font-size:17px;line-height:1.5;margin:18px 8px 0}
+  .tiny{font-size:12px;opacity:.55;margin-top:10px}
+  .heart{position:fixed;font-size:22px;animation:float 7s linear infinite;opacity:.65;pointer-events:none}
+  @keyframes float{from{transform:translateY(110vh) rotate(0deg)}to{transform:translateY(-15vh) rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>For Angie 💗</h1>
+  <p class="sub">Alex made you a tiny little something...</p>
+  <video controls playsinline preload="metadata">
+    <source src="animation.webm" type="video/webm">
+    Your browser doesn't support this video.
+  </video>
+  <div class="message">Okay that's it. I just wanted you to see this 🥹💕</div>
+  <div class="tiny">— Alex</div>
+</div>
+<script>
+const hearts=["💗","💕","💖","💘","🩷","✨"];
+for(let i=0;i<14;i++){
+  const s=document.createElement("span");
+  s.className="heart";
+  s.textContent=hearts[Math.floor(Math.random()*hearts.length)];
+  s.style.left=Math.random()*100+"vw";
+  s.style.animationDelay=(-Math.random()*7)+"s";
+  s.style.animationDuration=(5+Math.random()*5)+"s";
+  document.body.appendChild(s);
+}
+</script>
+</body>
+</html>
